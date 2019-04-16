@@ -8,14 +8,15 @@ namespace Lab3
 {
     class StatesMatrix
     {
-        int Dimension { get; set; }
-        private int[,] matrix;
+        public static List<double> Intensity = new List<double>();
+        public int Dimension { get; set; }
+        protected double[,] matrix;
         public StatesMatrix(int d )
         {
             Dimension = d;
-            matrix = new int[d,d];
+            matrix = new double[d,d];
         }
-        public int this[int i, int j]
+        public double this[int i, int j]
         {
             get
             {
@@ -26,8 +27,6 @@ namespace Lab3
                 matrix[i, j] = value;
             }
         }
-
-
 
     }
 }

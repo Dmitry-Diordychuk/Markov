@@ -60,17 +60,44 @@ namespace Lab3
             }
         }
 
+
         private void CalculateButton_Click( object sender, EventArgs e )
         {
             //Transfer data in array
             StatesMatrix matrix = new StatesMatrix( Table.RowsAndCols );
+            int parseResult;
             for(int i = 0; i < Table.RowsAndCols; i++ )
             {
                 for(int j = 0; j < Table.RowsAndCols; j++ )
                 {
-                    matrix[i, j] = int.Parse(dataGridView1.Rows[i].Cells[j].Value.ToString());
+                    if( dataGridView1.Rows[i].Cells[j].Value != null )
+                    {
+                        if( int.TryParse( dataGridView1.Rows[i].Cells[j].Value.ToString(), out parseResult ) == true )
+                        {
+                            matrix[i, j] = parseResult;
+                        }
+                        else
+                        {
+                            MessageBox.Show( "Wrong input! Please put in table only numbers." );
+                        }
+                    }
+                    else
+                    {
+                        matrix[i, j] = 0;
+                    }
+
                 }
             }
+
+            KolmogorovMatrix kolmogorov = new KolmogorovMatrix( matrix );
+            double[] array = kolmogorov.Solve();
+            int n = 0;
+            foreach( var x in array )
+            {
+                listView1.Items.Add( $"P{n}(t) = " + x.ToString() );
+                listView1.Items.Add( $"time: {n}" + (x * StatesMatrix.Intensity[n++]).ToString() );
+            }
+            
         }
     }
 }
