@@ -36,10 +36,10 @@ namespace Lab3
         public KolmogorovMatrix(StatesMatrix statesMatrix)
             : this(statesMatrix.Dimension)
         {
-            double sum;
+            //double sum;
             for( int i = 0; i < statesMatrix.Dimension; i++ )
             {
-                sum = 0;
+                //sum = 0;
                 for( int j = 0; j < statesMatrix.Dimension; j++ )
                 {
                     if( statesMatrix[i, j] == 0 && statesMatrix[j, i] == 0 )
@@ -49,20 +49,20 @@ namespace Lab3
                     else if( statesMatrix[i, j] != 0 && statesMatrix[j, i] == 0 )
                     {
                         this.matrix[i, j] = -statesMatrix[i, j];
-                        sum = Math.Abs( sum - statesMatrix[i, j] );
+                        //sum = sum - statesMatrix[i, j];
                     }
                     else if( statesMatrix[i, j] == 0 && statesMatrix[j, i] != 0 )
                     {
                         this.matrix[i, j] = statesMatrix[j, i];
-                        sum = Math.Abs( sum + statesMatrix[j, i] );
+                        //sum = sum + statesMatrix[j, i];
                     }
                     else if( statesMatrix[i, j] != 0 && statesMatrix[j, i] != 0 )
                     {
                         this.matrix[i, j] = statesMatrix[j, i] - statesMatrix[i, j];
-                        sum = Math.Abs( sum + statesMatrix[j, i] - statesMatrix[i, j] );
+                        //sum = sum + statesMatrix[j, i] - statesMatrix[i, j];
                     }
                 }
-                StatesMatrix.Intensity.Add( sum );
+                //StatesMatrix.Intensity.Add( sum );
             }
             for( int j = 0; j < this.Dimension; j++ )
                 matrix[this.Dimension - 1, j] = 1;

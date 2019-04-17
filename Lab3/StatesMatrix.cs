@@ -8,7 +8,7 @@ namespace Lab3
 {
     class StatesMatrix
     {
-        public static List<double> Intensity = new List<double>();
+        //public static List<double> Intensity = new List<double>();
         public int Dimension { get; set; }
         protected double[,] matrix;
         public StatesMatrix(int d )

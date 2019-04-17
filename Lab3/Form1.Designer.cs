@@ -39,16 +39,18 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 15);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(298, 272);
+            this.dataGridView1.Size = new System.Drawing.Size(397, 335);
             this.dataGridView1.TabIndex = 0;
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(82, 290);
+            this.deleteButton.Location = new System.Drawing.Point(109, 357);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteButton.Size = new System.Drawing.Size(100, 28);
             this.deleteButton.TabIndex = 1;
             this.deleteButton.Text = "<";
             this.deleteButton.UseVisualStyleBackColor = true;
@@ -56,9 +58,10 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(163, 290);
+            this.addButton.Location = new System.Drawing.Point(217, 357);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.Size = new System.Drawing.Size(100, 28);
             this.addButton.TabIndex = 2;
             this.addButton.Text = ">";
             this.addButton.UseVisualStyleBackColor = true;
@@ -66,17 +69,19 @@
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(316, 12);
+            this.listView1.Location = new System.Drawing.Point(421, 15);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(101, 272);
+            this.listView1.Size = new System.Drawing.Size(274, 334);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // calculateButton
             // 
-            this.calculateButton.Location = new System.Drawing.Point(328, 290);
+            this.calculateButton.Location = new System.Drawing.Point(537, 357);
+            this.calculateButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.calculateButton.Name = "calculateButton";
-            this.calculateButton.Size = new System.Drawing.Size(75, 23);
+            this.calculateButton.Size = new System.Drawing.Size(100, 28);
             this.calculateButton.TabIndex = 4;
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = true;
@@ -84,14 +89,15 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 330);
+            this.ClientSize = new System.Drawing.Size(708, 406);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

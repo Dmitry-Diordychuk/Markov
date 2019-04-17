@@ -95,7 +95,7 @@ namespace Lab3
             foreach( var x in array )
             {
                 listView1.Items.Add( $"P{n}(t) = " + x.ToString() );
-                listView1.Items.Add( $"time: {n}" + (x * StatesMatrix.Intensity[n++]).ToString() );
+                listView1.Items.Add( $"time{n}:" + ( ( ( x * ( 1 - x ) ) / 0.0025 ) * 2.7 ).ToString() );
             }
             
         }
